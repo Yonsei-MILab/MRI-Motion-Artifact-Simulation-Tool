@@ -8,7 +8,7 @@ The paper entitled : "Deep Learning in MR Motion Correction: a Brief Review and 
  
  
 ## Usage
-* Run <code> view2Dmotion </code> im matlab.
+* Run <code>view2Dmotion</code> in matlab.
 Them main explanation about the simulation tool is mentioned in the paper.
 
 
