@@ -1,0 +1,23 @@
+            <ParamString."CoilElementID"> 
+            {
+            }
+            
+            <ParamDouble."dFFTScale"> 
+            {
+              <Precision> 6 
+            }
+            
+            <ParamDouble."dRawDataCorrectionFactorRe"> 
+            {
+              <Precision> 6 
+            }
+            
+            <ParamDouble."dRawDataCorrectionFactorIm"> 
+            {
+              <Precision> 6 
+            }
+          }
+          { }
+          
+        }
+        { <MinSize> 1  <MaxSize> 1000000000

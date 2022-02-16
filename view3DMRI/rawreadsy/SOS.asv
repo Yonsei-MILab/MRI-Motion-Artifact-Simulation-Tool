@@ -1,0 +1,8 @@
+function sos_im = SOS(im)
+% compute square root sum-of-squares
+%
+% coil element is along 
+
+
+
+sos_im = sqrt(sum(mag(im).^2,3));

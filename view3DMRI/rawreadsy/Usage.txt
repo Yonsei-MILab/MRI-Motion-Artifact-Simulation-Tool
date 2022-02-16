@@ -1,0 +1,15 @@
+Usage :
+
+	type 'Siemens_Raw_Read' in Matlab command window
+
+   or
+
+	run stand-alone package app.
+
+
+
+It only works in conventional 2DFT sequence.
+
+
+-------------------------------------------------------------------------------------
+Caution - Do Not modify .fig & another files!!

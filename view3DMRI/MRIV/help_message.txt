@@ -1,0 +1,134 @@
+<<<<<<<<<<<<<<<<    MRIV help    >>>>>>>>>>>>>>>>>>>
+
+------------------------------  Developer  ----------------------------------
+
+View3Dmri : Zho Sang-Young ( cefce@yonsei.ac.kr )
+Others : Ghim Min-Oh ( minohghim@yonsei.ac.kr )
+
+Medical Image Laboratory, 
+Yonsei University, Korea
+
+--------------------------------------------------------------------------------
+
+< View3Dmri >
+
+1) Load data '.mat' file of from Workspace
+
+2) click 'Change Variable' button, then you can see the
+images at each view point.
+
+3) The slice number of image can be changed by Using 
+arrow key, typing manually, or drag the bar on each image
+
+4) Resolution could by applied by typing the value
+
+5) 'enLarge' button plots the image you see in another 
+enlarged figure.
+
+6) You can understand the menus and buttons intuitively.
+
+
+
+
+< All plot >
+
+* This tool is suited for 3D matrix data(stacked images)
+
+1) Load data from Workspace
+
+2) click the data you want to plot
+
+3) Set the view point you want to see
+
+4) Set the number of slices (slice ranges) to plot
+(Default : from the start to the end of the matix 
+along the direction in '3)')
+
+5) Set the maximum and minimum value of color scale
+(Default : min and Max values of the selected matrix)
+
+6) Set the number of images in a row in plotting figures
+(Default : 6)
+
+7) Set Resolution of 3D matrix
+(Default : 1.0 x 1.0 x 1.0 )
+
+8) Select the color map
+(Default : gray )
+
+9) Do Plot !!
+
+< All plot >
+
+* This tool is suited for 3D matrix data(stacked images)
+
+1) Load data from Workspace
+
+2) click the data you want to plot
+
+3) Set the number of slices (slice ranges) to plot
+(Default : from the start to the end of the matix 
+along the direction in '3)')
+
+4) Set the maximum and minimum value of color scale
+(Default : min and Max values of the selected matrix)
+
+5) Select the color map
+(Default : gray )
+
+6) Plot !!
+
+7) Select ROI tool and draw ROI. ROI can be modified 
+before double clicking the left mouse button.
+
+8) Masking -> show masked ROI
+   Cropping ->  line : line plot
+                rect : crop
+                others : this button does not work.
+
+< 3D Rendering >
+
+1) Load data from Workspace
+
+2) click the data you want to plot
+
+3) Select between 'All range' or 'Crop'
+if you select 'Crop' you should set the range of matrix
+(Default : All range)
+
+4) Set rendering colors 'Face color' and 'Edge color'
+by using color tap or RGB value
+Face color [1.0 0.8 0.8] is similar to skin solor
+
+5) Set the surface value according to histogram(right-below)
+This is a very important value for rendering.!!!!!!!!!!
+
+6) Axes ratio could by applied by typing the value
+(Default : 1.0 x 1.0 x 1.0)
+
+7) set view angles (Az and El)
+(Default ;  [ -37.5, 30.0 ] )
+
+6~7 can be adjusted last plot. Just put the value you want 
+and press 'enter(return)'
+
+8) Do rendering!!!
+
+
+
+
+< Movie Maker >
+
+>>>  Underconstruction!!!
+
+It will be updated soon.
+
+
+
+------------------------------------- last update 12/03/2010
+
+
+if you have any questions or report bugs, 
+			don't hesitate to send e-mails to us.
+
+Thank you. :)

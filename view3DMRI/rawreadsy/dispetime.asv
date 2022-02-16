@@ -1,0 +1,17 @@
+function varargout = dispetime(end_time,start_time)
+% display etime to hour, min, sec
+
+elps_time = etime(end_time,start_time);
+
+h=mod(elps_time,3600);
+m=mod(elps_time-h*3600,60);
+s=mod(elps_time-h*3600,60);
+
+s = sprintf('\nElapsed time = %d h %d min %f sec.',...
+    h,,mod(elps_time,60));
+
+disp(s)
+
+if nargout==1
+    varargout{1}=s;
+end

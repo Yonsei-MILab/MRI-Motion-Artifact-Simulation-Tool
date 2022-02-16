@@ -1,0 +1,101 @@
+function varargout = mrimfsave(im,title_text,do_unwrap,index,dircname)
+% varargout = mrimfsave(im,title_text,do_unwrap,index)
+
+% for save complex image (magnitude and phase)  
+% to 'dircname' directory in increasing order
+%
+% USAGE : im -> image
+%         title_text -> figure title
+%         do_unwrap -> unwrap negative phase if 1
+%         index -> image indexing
+%
+%    output1 -> magnitude image matrix
+%    output2 -> phase image matrix
+
+
+if nargin==1
+    index=1;
+    do_unwrap=0;
+    title_text='';
+    
+elseif nargin==2
+    index=1;
+    do_unwrap=0;
+    
+elseif nargin==3
+    index=1;
+end
+
+if ~isreal(im)
+    mim=mag(im);    % mag() is more fast function than abs()
+else
+    mim=im;
+end
+
+pim = angle(im);
+
+if do_unwrap==1
+    pim=unwraptpim(pim);
+end
+
+
+mim_ent = entropy(mim);
+entropy_text = ['entropy(magnitude image) = ',num2str(mim_ent)];
+    
+
+% cf = figure; % make new figure
+cf= gcf;
+% set new position and size
+set(cf,'Toolbar','figure',...
+    'position',[100 380-50 560*2 420+50]);     % [left bottom width height]
+
+% Scale data and display an image object
+
+subplot(1,2,1);
+f=imagesc(mim); % use 'f' as gcf of current figure
+title(['Magnitude image #',num2str(index)],'FontSize',18,'FontWeight','bold');
+mrinit;
+
+subplot(1,2,2);
+g=imagesc(pim); % use 'g' as gcf of current figure
+title(['Phase image #',num2str(index)],'FontSize',18,'FontWeight','bold');
+mrinit;
+
+
+% set title_text
+title_text_win = uicontrol('style','text',...
+    'string',title_text,...
+    'BackgroundColor','w',...
+    'fontsize',20,...
+    'Units','pixel',...
+    'Position',[550 10 480 40],...    % [left bottom width height]
+    'Parent',cf);
+
+% set entropy_text
+entropy_text_win = uicontrol('style','text',...
+    'string',entropy_text,...
+    'BackgroundColor','w',...
+    'fontsize',16,...
+    'ForegroundColor','b',...
+    'Units','pixel',...
+    'Position',[130 10 400 30],...    % [left bottom width height]
+    'Parent',cf);
+
+
+if ~isdir(['./figure/' dircname])
+    mkdir('./figure',dircname);
+end
+
+saveas(cf,['./figure/' dircname '/' dircname ' - ' num2str(index) '.jpg']);
+
+
+switch nargout
+    case 1
+        varargout{1} = mim;
+    case 2
+        varargout{1} = mim;
+        varargout{2} = pim;
+end
+
+        
+    
