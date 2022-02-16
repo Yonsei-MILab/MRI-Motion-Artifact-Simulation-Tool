@@ -1,6 +1,8 @@
 
 # MRI motion artifact simulation tool (View2Dmotion)
 This is the source codes of motion artifact simulation in MRI.
+<img src ="./gui.png"></img>
+</br>
 
 
 ## Publised Paper
